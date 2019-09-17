@@ -122,7 +122,6 @@ def dec_convert_nibbles_to_byte( quadruple_bytearray ):
 
 def dec_decrypt_byte_as_nibbles( nibble_quadruple, key_quadruple ):
 
-    # STUDENTS YOU MUST WRITE THIS FUNCTION
     ans = dec_xor(nibble_quadruple, key_quadruple)
     ans = dec_swap_last_two(ans)
     ans = dec_s_box(ans)
@@ -157,7 +156,6 @@ def dec_xor( nibbles, key ):
 
 def dec_swap_last_two( nibbles ):
 
-   # STUDENTS YOU MUST WRITE THIS FUNCTION
     ans = nibbles[:]
     temp = ans[-2]
     ans[-2]=ans[-1]
@@ -172,7 +170,6 @@ def dec_swap_last_two( nibbles ):
 
 def dec_s_box( nibbles ):
 
-   # STUDENTS YOU MUST WRITE THIS FUNCTION
     ans = nibbles[:]
     for i in range(4):
         if ans[i] == 0:
@@ -197,8 +194,6 @@ def dec_s_box( nibbles ):
 # http://stackoverflow.com/questions/3883004/negative-numbers-modulo-in-python
 
 def dec_subtract_last_two_first_two( nibbles ):
-
-   # STUDENTS YOU MUST WRITE THIS FUNCTION
 
     ans = nibbles[:]
     ans[0] = (ans[0]-ans[2])%4
